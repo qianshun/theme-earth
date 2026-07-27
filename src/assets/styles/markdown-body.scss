@@ -30,7 +30,8 @@
     }
   }
 
-  p > img {
+  p > img,
+  figure > img {
     border-radius: 0.4rem;
     overflow: hidden;
     @apply shadow;
