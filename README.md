@@ -1,5 +1,7 @@
 # Earth
 
+## fork 过来之后做了一些修改自己用
+
 Halo 2.0 的默认主题。
 
 ![Earth](./screenshot.jpg)
