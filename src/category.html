@@ -2,10 +2,12 @@
   <template name="head">
     <title th:text="|#{page.category.title(${category.spec.displayName})} - ${site.title}|"></title>
   </template>
-  <template name="hero">
+  <!-- <template name="hero">
     <th:block th:replace="~{modules/hero :: hero(isHome = true, cover = null, title = null)}" />
-  </template>
-  <section class="mx-auto mt-6 grid max-w-7xl grid-cols-1 gap-6 px-4 md:grid-cols-[1fr_18rem] lg:px-6">
+  </template> -->
+  <!-- <section class="mx-auto mt-6 grid max-w-7xl grid-cols-1 gap-6 px-4 md:grid-cols-[1fr_18rem] lg:px-6"> -->
+  <!-- 修改为单列布局 -->
+  <section class="mx-auto mt-6 block max-w-7xl px-4 lg:px-6">
     <div class="z-0 min-w-0">
       <th:block th:replace="~{modules/category-filter}" />
 
@@ -31,6 +33,6 @@
         th:replace="~{modules/pagination :: pagination(context = |${category.status.permalink}/|, prevUrl = ${posts.prevUrl}, nextUrl = ${posts.nextUrl}, totalPages = ${posts.totalPages}, page = ${posts.page}, hasPrevious = ${posts.hasPrevious()}, hasNext = ${posts.hasNext()})}"
       />
     </div>
-    <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" />
+    <!-- <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" /> -->
   </section>
 </include>
