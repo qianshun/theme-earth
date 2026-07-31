@@ -19,13 +19,19 @@
       </div>
     </section>
   </template>
-  <section
+  <!-- <section
     class="mx-auto mt-6 grid max-w-7xl grid-cols-1 gap-6 px-4 md:grid-cols-[1fr_18rem] lg:px-6"
+    th:classappend="${theme.config.layout.content_header} and ${not #strings.isEmpty(singlePage.spec.cover)} ? '!-mt-20' : ''"
+  > -->
+  <!-- 修改为单列布局 -->
+  <section
+    class="mx-auto mt-6 block max-w-7xl px-4 lg:px-6"
     th:classappend="${theme.config.layout.content_header} and ${not #strings.isEmpty(singlePage.spec.cover)} ? '!-mt-20' : ''"
   >
     <div class="z-0 min-w-0">
       <div class="rounded-xl bg-white p-4 dark:bg-slate-800">
-        <div class="flex items-center justify-between">
+        <!-- 不要作者栏 -->
+        <!-- <div class="flex items-center justify-between">
           <div class="inline-flex items-center justify-start gap-2">
             <a
               th:unless="${#strings.isEmpty(singlePage.owner.avatar)}"
@@ -94,12 +100,13 @@
               ></div>
             </div>
           </div>
-        </div>
-        <h1
+        </div> -->
+        <!-- 不要标题 -->
+        <!-- <h1
           th:if="${#strings.isEmpty(singlePage.spec.cover)} or ${theme.config.post.title_position == 'content'} or ${not theme.config.layout.content_header}"
           class="my-3 text-3xl font-medium dark:text-slate-50"
           th:text="${singlePage.spec.title}"
-        ></h1>
+        ></h1> -->
 
         <article
           class="!max-w-none break-words"
@@ -113,6 +120,7 @@
         </div>
       </div>
     </div>
-    <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" />
+    <!-- 不要侧边栏 -->
+    <!-- <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" /> -->
   </section>
 </include>
