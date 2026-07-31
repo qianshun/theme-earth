@@ -3,11 +3,13 @@
     <title th:text="|${title} - ${site.title}|"></title>
   </template>
 
-  <template name="hero">
+  <!-- <template name="hero">
     <th:block th:replace="~{modules/hero :: hero(isHome = true, cover = null, title = null)}" />
-  </template>
+  </template> -->
 
-  <section class="mx-auto mt-6 grid max-w-7xl grid-cols-1 gap-6 px-4 md:grid-cols-[1fr_18rem] lg:px-6">
+  <!-- <section class="mx-auto mt-6 grid max-w-7xl grid-cols-1 gap-6 px-4 md:grid-cols-[1fr_18rem] lg:px-6"> -->
+  <!-- 修改为单列布局 -->
+  <section class="mx-auto mt-6 block max-w-7xl px-4 lg:px-6">
     <div class="z-0 min-w-0">
       <div class="rounded-xl bg-white p-4 dark:bg-slate-800">
         <!-- 返回列表 -->
@@ -246,6 +248,6 @@
         </div>
       </div>
     </div>
-    <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" />
+    <!-- <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" /> -->
   </section>
 </include>
