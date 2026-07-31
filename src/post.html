@@ -187,7 +187,7 @@
         </div>
       </div>
     </div>
-    <th:block th:replace="~{modules/sidebar :: sidebar(prepend = ~{::sidebar_prepend})}">
+    <!-- <th:block th:replace="~{modules/sidebar :: sidebar(prepend = ~{::sidebar_prepend})}">
       <th:block th:fragment="sidebar_prepend">
         <div
           class="toc-container sticky top-20 z-[5] w-full cursor-pointer rounded-xl bg-white p-3 shadow transition-all duration-500 hover:shadow-md dark:bg-slate-800"
@@ -199,6 +199,18 @@
           <div class="toc mt-2 max-h-64 overflow-auto"></div>
         </div>
       </th:block>
-    </th:block>
+    </th:block> -->
+    <!-- 只保留目录 -->
+    <aside class="z-0 hidden w-72 flex-col gap-6 md:flex">
+      <div
+        class="toc-container sticky top-20 z-[5] w-full cursor-pointer rounded-xl bg-white p-3 shadow transition-all duration-500 hover:shadow-md dark:bg-slate-800"
+      >
+        <h2 class="inline-flex items-center gap-2 text-base dark:text-slate-50">
+          <span class="i-tabler-list text-lg"></span>
+          <th:block th:text="#{page.post.toc}"></th:block>
+        </h2>
+        <div class="toc mt-2" style="max-height: 400px; overflow-y: auto"></div>
+      </div>
+    </aside>
   </section>
 </include>
